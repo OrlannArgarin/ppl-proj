@@ -1,19 +1,77 @@
-# this is a sample program--------TOKEN_SLCOMMENT
-&--------TOKEN_INVALID
-_--------TOKEN_INVALID
-$--------TOKEN_INVALID
-`--------TOKEN_INVALID
-_name--------TOKEN_INVALID
-name_1--------TOKEN_ID
-break--------TOKEN_ID
-end--------TOKEN_KEYWORD
-?--------TOKEN_INVALID
+myNum23_--------TOKEN_ID
++--------TOKEN_ADDITION
+---------TOKEN_SUBTRACTION
 /--------TOKEN_DIVISION
+*--------TOKEN_MULTIPLICATION
+%--------TOKEN_MODULUS
+^--------TOKEN_EXPONENT
+@--------TOKEN_INTDIV
+==--------TOKEN_ISEQUALTO
+>--------TOKEN_GREATERTHAN
+<--------TOKEN_LESSTHAN
+!=--------TOKEN_NOTEQUAL
+<=--------TOKEN_LESSTHANOREQUALS
+>=--------TOKEN_GREATERTHANOREQUALS
+and--------TOKEN_OPERATOR
+or--------TOKEN_OPERATOR
+not--------TOKEN_OPERATOR
+end--------TOKEN_KEYWORD
+if--------TOKEN_KEYWORD
+else--------TOKEN_KEYWORD
+then--------TOKEN_KEYWORD
+case--------TOKEN_KEYWORD
+foreach--------TOKEN_KEYWORD
+in--------TOKEN_KEYWORD
+do--------TOKEN_KEYWORD
+match--------TOKEN_KEYWORD
+return--------TOKEN_KEYWORD
+continue--------TOKEN_KEYWORD
+true--------TOKEN_KEYWORD
+false--------TOKEN_KEYWORD
+list--------TOKEN_KEYWORD
+while--------TOKEN_KEYWORD
+display--------TOKEN_KEYWORD
+input--------TOKEN_KEYWORD
+num--------TOKEN_RESVWORD
+decimal--------TOKEN_RESVWORD
+word--------TOKEN_RESVWORD
+letter--------TOKEN_RESVWORD
+boolean--------TOKEN_RESVWORD
+the--------TOKEN_NOISEWORD
+a--------TOKEN_NOISEWORD
+an--------TOKEN_NOISEWORD
+#this is a single line comment--------TOKEN_SLCOMMENT
+##this is a 
+multi line comment##--------TOKEN_MLCOMMENT
+=--------TOKEN_EQUALS
+,--------TOKEN_COMMA
+(--------TOKEN_LPAREN
+)--------TOKEN_RPAREN
+[--------TOKEN_LBRACKET
+]--------TOKEN_RBRACKET
+,--------TOKEN_COMMA
+;--------TOKEN_SEMICOLON
+{--------TOKEN_LBRACE
+}--------TOKEN_RBRACE
+:--------TOKEN_COLON
+1000--------TOKEN_NUM
+12.324--------TOKEN_DECIMAL
+Hello World--------TOKEN_WORD
+x--------TOKEN_LETTER
+true--------TOKEN_KEYWORD
+false--------TOKEN_KEYWORD
+123abc--------TOKEN_INVALID
+1.2.3.4.5--------TOKEN_INVALID
+string with no ending double quote--------TOKEN_INVALID
+morethanonechracter--------TOKEN_INVALID
+a--------TOKEN_INVALID
+`--------TOKEN_INVALID
+~--------TOKEN_INVALID
+@--------TOKEN_INTDIV
+!--------TOKEN_INVALID
+$--------TOKEN_INVALID
+&--------TOKEN_INVALID
 |--------TOKEN_INVALID
 \--------TOKEN_INVALID
-:--------TOKEN_COLON
-a--------TOKEN_NOISEWORD
-and--------TOKEN_OPERATOR
-an--------TOKEN_NOISEWORD
-##this is the end
-of program##--------TOKEN_MLCOMMENT
+.--------TOKEN_DOT
+?--------TOKEN_INVALID

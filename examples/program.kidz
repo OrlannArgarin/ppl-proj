@@ -1,22 +1,57 @@
-# this is a sample program
-
-&
-_
-$
-`
-_name
-name_1
-break
-end
-?
-/
-|
-\
-:
-a
+myNum23_
++ - / * % ^ @
+== > < != <= >=
 and
+or
+not
+
+end
+if
+else
+then
+case
+foreach
+in
+do
+match
+return
+continue
+true
+false
+list
+while
+display
+input
+
+num
+decimal
+word
+letter
+boolean
+
+the
+a
 an
 
+#this is a single line comment
 
-##this is the end
-of program##
+##this is a 
+multi line comment##
+
+= , () [] , ; {} :
+
+1000
+12.324
+"Hello World"
+'x'
+true
+false
+
+
+123abc
+1.2.3.4.5
+"string with no ending double quote
+'morethanonechracter'
+'a
+
+` ~ @ ! $ & | \ . ?
