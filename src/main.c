@@ -126,6 +126,9 @@ int main(int argc, char *argv[])
         case 34:
             strcpy(tokenName, "TOKEN_LETTER");
             break;
+        case 35:
+            strcpy(tokenName, "TOKEN_COLON");
+            break;
         }
         fprintf(file, "%s--------%s\n", token->value, tokenName);
 

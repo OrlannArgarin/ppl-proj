@@ -1,34 +1,15 @@
 # this is a sample program--------TOKEN_SLCOMMENT
-display--------TOKEN_KEYWORD
-(--------TOKEN_LPAREN
-hello world--------TOKEN_WORD
-)--------TOKEN_RPAREN
-word--------TOKEN_RESVWORD
-name1--------TOKEN_ID
-=--------TOKEN_EQUALS
-orls--------TOKEN_WORD
-word--------TOKEN_RESVWORD
-name2--------TOKEN_ID
-=--------TOKEN_EQUALS
-mark--------TOKEN_WORD
-num--------TOKEN_RESVWORD
-age1--------TOKEN_ID
-=--------TOKEN_EQUALS
-20--------TOKEN_NUM
-num--------TOKEN_RESVWORD
-age2--------TOKEN_ID
-=--------TOKEN_EQUALS
-21--------TOKEN_NUM
-letter--------TOKEN_RESVWORD
-a--------TOKEN_ID
-=--------TOKEN_EQUALS
-a--------TOKEN_LETTER
-and--------TOKEN_OPERATOR
-or--------TOKEN_OPERATOR
-not--------TOKEN_OPERATOR
-d1sisanidwithlessthan31chars--------TOKEN_ID
-d1sisnotanidwithmorethan31charss--------TOKEN_INVALID
-d1sisanidwith31charssssssssssss--------TOKEN_ID
-d1splay--------TOKEN_ID
+&--------TOKEN_INVALID
+_--------TOKEN_INVALID
+$--------TOKEN_INVALID
+`--------TOKEN_INVALID
+_name--------TOKEN_INVALID
+name_1--------TOKEN_ID
+break--------TOKEN_ID
+end--------TOKEN_KEYWORD
+/--------TOKEN_DIVISION
+|--------TOKEN_INVALID
+\--------TOKEN_INVALID
+:--------TOKEN_COLON
 ##this is the end
 of program##--------TOKEN_MLCOMMENT

@@ -182,6 +182,58 @@ token_T *lexer_get_next_token(lexer_T *lexer)
         case '.':
             return lexer_advance_with_token(lexer, init_token(TOKEN_DOT, lexer_get_current_char_as_string(lexer)));
             break;
+        case '&':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
+        case '$':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
+        case ':':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_COLON, lexer_get_current_char_as_string(lexer)));
+            break;
+        case '|':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
+        case '\\':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
+        case '`':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
+        case '~':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
+        case '_':
+            value = calloc(1, sizeof(char));
+            value[0] = '\0';
+
+            s = lexer_get_current_char_as_string(lexer);
+            value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
+            strcat(value, s);
+
+            lexer_advance(lexer);
+
+            while (isalnum(lexer->c) || (lexer->c) == '_' && (lexer->c) != ' ' && (lexer->c) != '\n' && (lexer->c) != '\0')
+            {
+                s = lexer_get_current_char_as_string(lexer);
+                value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
+                strcat(value, s);
+
+                lexer_advance(lexer);
+            }
+
+            if ((lexer->c) == ' ' && (lexer->c) == '\n' && (lexer->c) == '\0')
+            {
+                lexer_advance(lexer);
+            }
+
+            if (strlen(value) > 31)
+            {
+                lexer_advance(lexer);
+                return init_token(TOKEN_INVALID, value);
+            }
+            return init_token(TOKEN_INVALID, value);
+            break;
         }
     }
 

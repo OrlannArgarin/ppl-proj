@@ -38,7 +38,8 @@ typedef struct TOKEN_STRUCT
         TOKEN_COMMA,
         TOKEN_NOISEWORD,
         TOKEN_DOT,
-        TOKEN_LETTER
+        TOKEN_LETTER,
+        TOKEN_COLON
     } type;
 
     char *value;

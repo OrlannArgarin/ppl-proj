@@ -10,7 +10,7 @@ char *get_file_contents(const char *filepath)
     FILE *f;
 
     int length_f = strlen(filepath);
-    if (filepath[length_f-1]=='z'  && filepath[length_f-2]=='d' && filepath[length_f-3]=='i'  && filepath[length_f-4]=='k' && filepath[length_f-5]=='.' )
+    if (filepath[length_f - 1] == 'z' && filepath[length_f - 2] == 'd' && filepath[length_f - 3] == 'i' && filepath[length_f - 4] == 'k' && filepath[length_f - 5] == '.')
     {
         f = fopen(filepath, "r");
         if (f)
@@ -38,8 +38,4 @@ char *get_file_contents(const char *filepath)
         printf("Filetype not supported.\n");
         exit(2);
     }
-
-   
-
-    
 }
