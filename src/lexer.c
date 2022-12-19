@@ -194,6 +194,9 @@ token_T *lexer_get_next_token(lexer_T *lexer)
         case '|':
             return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
             break;
+        case '?':
+            return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
+            break;
         case '\\':
             return lexer_advance_with_token(lexer, init_token(TOKEN_INVALID, lexer_get_current_char_as_string(lexer)));
             break;
@@ -736,9 +739,18 @@ token_T *lexer_collect_id(lexer_T *lexer)
                     }
                 }
             }
-            else if (lexer->c == 'a') // an, and
+            else if (lexer->c == 'a') // a, an, and
             {
                 lexer_advance(lexer);
+                if (lexer->c == ' ' || lexer->c == '\0' || lexer->c == '\n')
+                {
+                    lexer_advance(lexer);
+                    return init_token(TOKEN_NOISEWORD, value);
+                }
+                else if (!isalnum(lexer->c) && (lexer->c != '_'))
+                {
+                    return init_token(TOKEN_NOISEWORD, value);
+                }
 
                 if (lexer->c == 'n')
                 {

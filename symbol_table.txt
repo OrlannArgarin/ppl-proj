@@ -7,9 +7,13 @@ _name--------TOKEN_INVALID
 name_1--------TOKEN_ID
 break--------TOKEN_ID
 end--------TOKEN_KEYWORD
+?--------TOKEN_INVALID
 /--------TOKEN_DIVISION
 |--------TOKEN_INVALID
 \--------TOKEN_INVALID
 :--------TOKEN_COLON
+a--------TOKEN_NOISEWORD
+and--------TOKEN_OPERATOR
+an--------TOKEN_NOISEWORD
 ##this is the end
 of program##--------TOKEN_MLCOMMENT
